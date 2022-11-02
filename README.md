@@ -1,0 +1,1 @@
+# SchoolManagementSystem-Lsed-with-Django
