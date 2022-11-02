@@ -1,0 +1,25 @@
+{% extends 'school/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="jumbotron" style="margin-bottom:0px; background-image: url('{% static 'images/book.jpg' %}');">
+ <br> <br> <br> <br>
+  <h1 class="display-4">Bienvenue, Administrateur
+      <br>  au Système d'Information du LSED. </h1>
+    <div class="text-center">
+      <img  class="img-fluid rounded-pill" src="{% static 'images/lsedimg (5).jpg' %}">
+    </div>
+  <hr class="my-4 text-white">
+  <p style="font-size: 25px;">Vous êtes membre de l'administration (provisuer, censeur, intendant ou surveillant général) ? Cette page vous est dédiée !  </p>
+<br>
+  <p class="lead">
+    <a class="btn btn-warning btn-lg" href="adminlogin" role="button">Se Connecter</a>
+  </p>
+
+     <br> <br> <br>
+
+</div>
+
+{% endblock content %}

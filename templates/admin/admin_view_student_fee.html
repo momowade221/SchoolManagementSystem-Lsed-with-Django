@@ -1,0 +1,70 @@
+{% extends 'admin/adminbase.html' %}
+{% load static %}}
+
+
+
+{% block content %}
+
+<head>
+
+   <link rel="stylesheet" href="{%static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" />
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+
+</head>
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6  style="color:white;  text-transform:uppercase; font-size:20px;" class="panel-title">Salaire des Professeurs</h6>
+
+      </div>
+
+      <table style="color:white;" class="table table-hover" id="dev-table">
+        <thead>
+
+          <tr>
+            <th>Nom de l'Elève</th>
+
+            <th>Frais de scolarité</th>
+
+          </tr>
+        </thead>
+        {% for s in students %}
+        <tr>
+          <td> {{s.get_name}}</td>
+          <td>{{s.fee}} FCFA</td>
+        </tr>
+
+        {% endfor %}
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock content %}

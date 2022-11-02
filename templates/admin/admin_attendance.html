@@ -1,0 +1,87 @@
+{% extends 'admin/adminbase.html' %}
+{% load static %}}
+
+
+
+
+{% block content %}
+
+<head>
+
+   <link rel="stylesheet" href="{%static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" />
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+
+</head>
+
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h6  style="color:white;  text-transform:uppercase; font-size:20px;" class="panel-title">Présence</h6>
+
+      </div>
+
+      <table style="color:white;" class="table table-hover" id="dev-table">
+        <thead>
+
+          <tr>
+            <th>Classe</th>
+            <th>Signaler Présence</th>
+            <th>Voir Présences</th>
+          </tr>
+        </thead>
+
+
+        <tr>
+          <td> Seconde</td>
+          <td><a  class="btn btn-warning btn-xs" href="{% url 'admin-take-attendance' 'Seconde'  %}"><span class="glyphicon glyphicon-plus"></span></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'admin-view-attendance' 'Seconde'  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        </tr>
+
+        <tr>
+          <td> Première</td>
+          <td><a class="btn btn-warning btn-xs" href="{% url 'admin-take-attendance' 'Première'  %}"><span class="glyphicon glyphicon-plus"></span></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'admin-view-attendance' 'Première'  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        </tr>
+
+
+        <tr>
+          <td> Terminale</td>
+          <td><a class="btn btn-warning btn-xs" href="{% url 'admin-take-attendance' 'Terminale'  %}"><span class="glyphicon glyphicon-plus"></span></a></td>
+          <td><a class="btn btn-danger btn-xs" href="{% url 'admin-view-attendance' 'Terminale'  %}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+        </tr>
+
+
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+
+{% endblock content %}

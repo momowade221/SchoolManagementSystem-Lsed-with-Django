@@ -1,0 +1,28 @@
+{% extends 'school/homebase.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUPERADMIN</title>
+</head>
+<body >
+
+{% block content %}
+    <div style="background-image: url('{% static 'images/book.jpg' %}');">
+<br> <br> <br> <br> <br> <br><br> <br> <br>
+    <h1 class="display-4 text-center text-warning"> DÉCONNECTEZ-VOUS D'ABORD DE LA PAGE DE SUPER ADMINISTRATEUR</h1>
+    <div class="text-center">
+        <a class="h6 text-danger " href="admin/logout"> Cliquez ici pour vous déconnecter</a>
+        <a class="h6 text-success " href="admin/"> Cliquez ici pour retourner à la page d'Administration</a>
+       </div>
+        <br> <br> <br> <br> <br> <br><br> <br> <br>
+    <br> <br> <br> <br> <br> <br><br> <br> <br>
+<br><br>
+
+
+    </div>
+{% endblock %}
+
+</body>
+</html>

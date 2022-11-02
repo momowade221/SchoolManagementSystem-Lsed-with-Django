@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+    <title>Lycée Scientifique d'Excellence de Diourbel</title>
+<link rel="shortcut icon" href="{%  static 'images/favicon.ico' %}">
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/lsed-stud.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 70px;
+      color: #e0a800;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px#e0a800, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #e0a800, 0 0 30px #0f6674, 0 0 40px #0f6674, 0 0 50px #0f6674, 0 0 60px #0f6674, 0 0 70px #0f6674, 0 0 80px #0f6674;
+      }
+    }
+  </style>
+
+</head>
+
+<body style="background-image: url('{% static 'images/book.jpg' %}');">
+  {% include "school/navbar.html" %}
+  <br>
+  <br>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <br>
+    <h1 class="display-5 glow">BIENVENUE <br>AU SYSTEME D'INFORMATION <br> du Lycée Scientifique d'Excellence de Diourbel</h1>
+
+    <br><br>
+    <br><br><br><br><br>
+    <p class="lead">
+      <a class="btn btn-warning btn-lg" href="/studentsignup" role="button">Vous êtes un nouvel élève du LSED? Cliquez ici</a>
+    </p>
+    <br><br>
+  </div>
+
+  <br>
+  <br>
+  <p id="dent">"Formez-vous, armez-vous de sciences jusqu’aux dents et arrachez votre patrimoine culturel." Cheikh Anta Diop</p>
+  <br>
+
+  {% include "school/admin_teacher_student_card.html" %}
+
+  <br><br>
+
+  {% include "school/footer.html" %}
+</body>
+
+</html>

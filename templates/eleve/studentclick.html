@@ -1,0 +1,21 @@
+{% extends 'school/homebase.html' %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron" style="margin-bottom:0px; background-image: url('{% static 'images/book.jpg' %}');">
+   <br> <br> <br> <br>
+  <h1 class="display-4">Bienvenue, Elève
+      <br>  au Système d'Information du LSED. </h1>
+    <div class="text-center">
+      <img  class="img-fluid rounded-pill" src="{% static 'images/lsedimg (5).jpg' %}">
+    </div>
+  <hr class="my-4">
+  <p>Vous êtes élève ? Connectez vous pour accéder aux fonctionnalités .</p>
+  <p class="lead">
+    <a class="btn btn-warning btn-lg" href="studentsignup" role="button">Nouvelle Admission</a>
+    <a class="btn btn-warning btn-lg" href="studentlogin" role="button">Se Connecter</a>
+  </p>
+ <br> <br> <br>
+</div>
+
+{% endblock content %}

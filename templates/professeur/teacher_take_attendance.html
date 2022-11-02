@@ -1,0 +1,75 @@
+{% extends 'professeur/teacherbase.html' %}
+{% load widget_tweaks %}
+{% load static %}
+{% block content %}
+
+<head>
+
+   <link rel="stylesheet" href="{%static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" />
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+
+    .btnSubmit {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+
+<form method="post">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h6  style="color:white;  text-transform:uppercase; font-size:20px;" class="panel-title">Présence</h6>
+
+        </div>
+
+        <table style="color:white;" class="table table-hover" id="dev-table">
+          <thead>
+
+            <tr>
+              <th>Nom de l'Elève</th>
+              <th>Présent/Absent</th>
+            </tr>
+          </thead>
+
+
+          {% csrf_token %}
+          {%for student in students%}
+          <tr>
+            <td>{{student.get_name}}</td>
+            <td>{{aform.present_status}}</td>
+          </tr>
+          {%endfor%}
+
+
+
+        </table>
+        {% render_field form.date class="form-control" placeholder="Saisir la date mm/dd/yyyy" %}
+     <br>
+      <div class="text-center">
+        <button type="submit" class="btnSubmit">Soumettre</button>
+              </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock content %}
